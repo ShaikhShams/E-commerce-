@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Policy</title>
+   <style>
+     body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.policy-section {
+    margin-top: 20px;
+}
+
+.collapsible {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.collapsible:hover {
+    background-color: #0056b3;
+}
+
+.content {
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.content p {
+    margin: 10px 0;
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Return Policy</h1>
+        <p>We want you to be completely satisfied with your purchase. If you are not satisfied, we are here to help.</p>
+        
+        <div class="policy-section">
+            <button class="collapsible">Return Period</button>
+            <div class="content">
+                <p>You have 30 calendar days to return an item from the date you received it.</p>
+            </div>
+        </div>
+        
+        <div class="policy-section">
+            <button class="collapsible">Conditions for Returns</button>
+            <div class="content">
+                <p>To be eligible for a return, your item must be unused and in the same condition that you received it. Your item must be in the original packaging.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <button class="collapsible">Refunds</button>
+            <div class="content">
+                <p>Once we receive your item, we will inspect it and notify you that we have received your returned item. We will immediately notify you on the status of your refund after inspecting the item.</p>
+                <p>If your return is approved, we will initiate a refund to your original method of payment. You will receive the credit within a certain number of days, depending on your card issuer's policies.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <button class="collapsible">Shipping</button>
+            <div class="content">
+                <p>You will be responsible for paying for your own shipping costs for returning your item. Shipping costs are non-refundable. If you receive a refund, the cost of return shipping will be deducted from your refund.</p>
+            </div>
+        </div>
+
+        <div class="policy-section">
+            <button class="collapsible">Contact Us</button>
+            <div class="content">
+                <p>If you have any questions on how to return your item, contact us at <a href="mailto:support@ecommerce.com">support@ecommerce.com</a>.</p>
+            </div>
+        </div>
+    </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> 
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    var coll = document.getElementsByClassName('collapsible');
+    for (var i = 0; i < coll.length; i++) {
+        coll[i].addEventListener('click', function () {
+            this.classList.toggle('active');
+            var content = this.nextElementSibling;
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+});
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+        gsap.from(".policy-section", { 
+          duration: 0.5, 
+          opacity: 0,
+          y: 50 ,
+          stagger:0.5,
+          ease:"power2.out"
+          
+          
+          
+        });
+        
+        gsap.from("p", {
+          duration: 0.2,
+          opacity: 0, 
+          scale: 0.8, 
+          delay: 1,ease: "elastic.out(1, 0.3)"
+          
+          
+          
+        });
+        
+      });
+
+    </script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Information</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.shipping-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.option {
+    background-color: #e9e9e9;
+    padding: 15px;
+    border-radius: 8px;
+    flex: 1;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: #ddd;
+}
+
+.option h2 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#selected-option {
+    margin-top: 20px;
+    display: none;
+}
+
+#selected-option h3 {
+    color: #007bff;
+}
+
+#selected-option p {
+    margin: 5px 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shipping Information</h1>
+        <div class="shipping-options">
+            <div class="option" id="standard">
+                <h2>Standard Shipping</h2>
+                <p>Delivery in 5-7 business days.</p>
+                <button onclick="selectOption('Standard Shipping', 0)">Select</button>
+            </div>
+            <div class="option" id="express">
+                <h2>Express Shipping</h2>
+                <p>Delivery in 2-3 business days.</p>
+                <button onclick="selectOption('Express Shipping', 5)">Select</button>
+            </div>
+            <div class="option" id="overnight">
+                <h2>Overnight Shipping</h2>
+                <p>Next day delivery.</p>
+                <button onclick="selectOption('Overnight Shipping', 10)">Select</button>
+            </div>
+        </div>
+        <div id="selected-option">
+            <h3>Your Selected Shipping Option:</h3>
+            <p id="option"></p>
+            <p id="cost"></p>
+        </div>
+    </div>
+    <script> function selectOption(option, cost) {
+    document.getElementById('selected-option').style.display = 'block';
+    document.getElementById('option').innerText = option;
+    document.getElementById('cost').innerText = `Additional Cost: ${cost}`;
+}
+</script>
+</body>
+</html>

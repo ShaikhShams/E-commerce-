@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+    align-items: center;
+    min-height: 100vh;
+}
+
+.service-container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 40px);
+    max-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.service-card h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(100% - 40px);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="service-container">
+        <h1>Our Services</h1>
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h2>Fast Delivery</h2>
+                <p>Get your products delivered quickly with our expedited shipping options, ensuring a speedy delivery right to your door.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h2>24/7 Customer Support</h2>
+                <p>Our dedicated support team is available 24/7 to assist you with any questions or concerns you may have.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-undo-alt"></i>
+                </div>
+                <h2>Easy Returns</h2>
+                <p>Shop with confidence knowing that if you're not satisfied, you can easily return any item within 30 days of purchase.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h2>Secure Payment</h2>
+                <p>We provide secure payment options to ensure your information is safe and your transactions are protected.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+     
+
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.from(".services", { 
+      duration: 1,
+      opacity: 0,
+      y: -50
+      
+      
+    });
+    gsap.from(".service-card", { 
+      duration: 0.2, 
+      opacity: 0, y: 20,
+      delay: 0.2, 
+      stagger:0.2
+      
+      
+    });
+   
+    
+});
+
+    </script> 
+
+
+</body>
+</html>

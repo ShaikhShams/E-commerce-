@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Thank You for Your Purchase!</title>
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    color: white;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4f41;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="thank-you-message">
+            <h1>Thank You for Your Purchase!</h1>
+            <p>Your order has been successfully placed.</p>
+        </div>
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p>Order Number: <span id="order-number"></span></p>
+            <p>Estimated Delivery: <span id="delivery-date"></span></p>
+        </div>
+        <a href="Main-file.html"><<button id="continue-shopping" >Continue Shopping</button><</a>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+   
+    const orderNumber = "123456789";
+    const deliveryDate = new Date();
+    deliveryDate.setDate(deliveryDate.getDate() + 7); 
+
+    document.getElementById("order-number").textContent = orderNumber;
+    document.getElementById("delivery-date").textContent = deliveryDate.toDateString();
+
+   
+    document.getElementById("continue-shopping").addEventListener("click", function() {
+        window.location.href = "project.html"; 
+    });
+});
+
+    </script>
+</body>
+</html>
